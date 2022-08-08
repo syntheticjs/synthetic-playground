@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "2b969944cb56ad6df324ec9a24d43d02",
     "packages": [
         {
             "name": "brick/math",
@@ -4921,6 +4921,67 @@
             "time": "2022-07-20T13:46:29+00:00"
         },
         {
+            "name": "syntheticjs/synthetic",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/syntheticjs/synthetic.git",
+                "reference": "a3b42752b34647ce5ee0cbd8a990bdd8ecf3b6c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/syntheticjs/synthetic/zipball/a3b42752b34647ce5ee0cbd8a990bdd8ecf3b6c5",
+                "reference": "a3b42752b34647ce5ee0cbd8a990bdd8ecf3b6c5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.65|^9.19",
+                "illuminate/support": "^8.65|^9.19",
+                "illuminate/validation": "^8.65|^9.19",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.6",
+                "phpunit/phpunit": "^8.4|^9.0",
+                "psy/psysh": "^0.11.8"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Synthetic\\SyntheticServiceProvider"
+                    ],
+                    "aliases": {
+                        "Synthetic": "Synthetic\\SyntheticFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Synthetic\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "caleb@calebporzio.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/syntheticjs/synthetic/issues",
+                "source": "https://github.com/syntheticjs/synthetic/tree/v0.0.1-alpha.2"
+            },
+            "time": "2022-08-08T16:22:59+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.4",
             "source": {
@@ -7915,7 +7976,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "syntheticjs/synthetic": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
