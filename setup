@@ -1,0 +1,18 @@
+#!/bin/bash
+
+composer install
+
+cp .env.example .env
+
+artisan key:generate
+
+touch database/database.sqlite
+
+artisan migrate
+artisan db:seed
+
+npm install
+
+npm run dev
+
+xdg-open synthetic-playground.test
