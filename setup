@@ -1,8 +1,8 @@
 #!/bin/bash
 
-composer install
-
 cp .env.example .env
+
+composer install
 
 php artisan key:generate
 
@@ -15,4 +15,4 @@ npm install
 
 npm run build
 
-xdg-open synthetic-playground.test
+open http://synthetic-playground.test
